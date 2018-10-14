@@ -1,0 +1,73 @@
+@import "colors";
+#portfolio {
+  margin-top: 3rem;
+  text-align: center;
+  a {
+    display: inline-block;
+  }
+}
+#portfolio h1 {
+  font-size: 1.5rem;
+}
+#portfolio-items figure {
+  background: $color1;
+  color: $color4;
+  margin: 2rem 0;
+  box-shadow: 0px 3px 6px $color1;
+}
+figcaption {
+  padding: 1rem;
+}
+#portfolio-items figure p {
+  text-align: left;
+  a {
+    color: $color4;
+  }
+}
+#portfolio-items figure img {
+  width: 100%;
+}
+#portfolio-items figure h2 {
+  font-size: 1.125rem;
+  margin: 0 0 1.5rem;
+}
+#portfolio-items figure > a {
+  margin: 0.5rem 0 1.2rem;
+  text-decoration: none;
+  color: $color4;
+  border: 2px solid $color3;
+  padding: 0.25rem 0.6rem;
+  border-radius: 13px;
+  transition: all 0.2s ease;
+  &:hover,
+  &:active {
+    background: $color3;
+  }
+}
+.codepen-link {
+  color: $color3;
+  font-weight: bold;
+  border: 1px solid $color3;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 24px;
+  &:hover, &:active{
+    background: $color3;
+    color:$color4;
+  }
+}
+@media screen and (min-width: 768px) {
+  #portfolio{
+    margin-top:5rem;
+  }
+  #portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin: 2rem 0;
+  }
+  #portfolio-items figure{
+      margin: 0;
+  }
+}

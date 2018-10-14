@@ -1,0 +1,39 @@
+@import "colors";
+footer{
+    background: $color2;
+    color: $color4;
+    text-align: center;
+    -webkit-clip-path: polygon(0 33%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 33%, 100% 0, 100% 100%, 0% 100%);
+position: absolute;
+width: 100%;
+bottom: 0;
+}
+#contact{
+    padding: 2.5rem 0 .6rem;
+}
+footer p{
+    background: $color3;
+    padding: .7rem;
+}
+#contact a{
+    color:$color4;
+    font-size: 1.7rem;
+    &:hover{
+        color:$color3;
+    }
+}
+#contact a:nth-child(3){
+    margin: 0 1.4rem;
+}
+#contact a:last-child{
+    margin-left:1.4rem;
+}
+@media screen and (min-width: 768px){
+    #contact h2{
+        font-size: 1.7rem;
+    }
+    #contact a{
+        font-size: 2rem;
+    }
+}

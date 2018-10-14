@@ -1,0 +1,31 @@
+@import "About";
+@import "Portfolio";
+@import "colors";
+@import "Home";
+@import "Footer";
+@import "Error";
+@import "Blog";
+@import "Post";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body{
+    background: $color4;
+    font-family: 'Open Sans',sans-serif;
+    color:$color2;
+}
+#root{
+    min-height: 100vh;
+    position: relative;
+}
+main{
+    padding-bottom: 163.969px;
+}
+.wrapper{
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+}

@@ -1,0 +1,47 @@
+@import "colors";
+#main-post{
+    margin-top:1.3rem;
+}
+.go-back{
+    color:$color3;
+    text-decoration: none;
+    margin: 3.5rem 0 0;
+    display: inline-block;
+}
+article{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.single-post{
+    text-align: center;
+    img{
+        width: 100%;
+    }
+    h1{
+        padding: .7rem 0;
+    }
+    div{
+        margin-bottom: 1.5rem;
+    }
+    p{
+        text-align: left;
+        color: $color1;
+    }
+}
+hr{
+    border:1px solid $color1;
+    margin: 1.3rem 0;
+}
+.share-icon{
+    display: inline-block;
+    margin: 0 0 1rem;
+    color:$color2;
+    font-size: 3rem;
+    &:hover, &:active{
+        color:$color3;
+    }
+}
+.share-icon:nth-of-type(2){
+    margin-left: 1rem;
+    margin-right:1rem;
+}
