@@ -1,0 +1,86 @@
+@import "colors";
+.modal-layer{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: transparentize($color3, .1);
+}
+.form-container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 0 auto;
+    background: $color4;
+    max-width: 480px;
+    padding: 2rem;
+    animation: showModal .8s ease 1;
+}
+form{
+    width: 100%;
+}
+label{
+    display: block;
+    margin-bottom: .5rem;
+    color: $color1;
+    font-weight: bold;
+}
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    padding: .5rem;
+}
+input, textarea{
+    border: none;
+}
+input{
+    padding: .5rem;
+    width: 100%;
+    margin-bottom: .8rem;
+}
+form button{
+    border: none;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0.5rem .7rem;
+    color: $color4;
+    border-radius: 14px; 
+    transition: all .3s ease;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+form button:first-of-type{
+    background: $color1;
+    &:hover, &:active{
+        background: $color3;
+    }
+}
+form button:last-of-type{
+    background: crimson;
+    margin-left: .5rem;
+    &:hover, &:active{
+        background: lighten(crimson, 10);
+    }
+}
+.form-failure,.form-success{
+    color: $color4;
+    background: crimson;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.form-success{
+    background: $color3;
+}
+@keyframes showModal {
+    0%{
+        top:-30vh;
+    }
+    100%{
+        top: 50%;
+    }
+}
+

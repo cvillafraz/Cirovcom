@@ -5,7 +5,7 @@ const initialState = {
     items: [],
 };
 
-export default function(state = initialState, action: AnyAction) {
+export default function(state: object = initialState, action: AnyAction) {
     switch (action.type) {
         case FETCH_POSTS:
         return {

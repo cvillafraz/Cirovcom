@@ -1,11 +1,13 @@
 @import "colors";
 #main-posts{
-    margin-top:3.5rem;
+    margin-top:3.8rem;
     text-align: center;
 }
 .post{
     box-shadow: 0px 3px 6px $color1;
     color:$color1;
+    max-width: 30rem;
+    margin: 1rem auto;
 }
 .post>div{
     padding: 1.5rem;

@@ -8,12 +8,11 @@
     margin: 3.5rem 0 0;
     display: inline-block;
 }
-article{
-    max-width: 960px;
-    margin: 0 auto;
-}
+
 .single-post{
     text-align: center;
+    max-width: 48rem;
+    margin: 0 auto;
     img{
         width: 100%;
     }
@@ -32,6 +31,9 @@ hr{
     border:1px solid $color1;
     margin: 1.3rem 0;
 }
+.share{
+    text-align: center;
+}
 .share-icon{
     display: inline-block;
     margin: 0 0 1rem;
@@ -44,4 +46,16 @@ hr{
 .share-icon:nth-of-type(2){
     margin-left: 1rem;
     margin-right:1rem;
+}
+@media screen and (min-width: 768px){
+    .go-back{
+        margin: 4rem 0 0;
+        font-size: 1.2rem; 
+    }
+    .single-post h1{
+        font-size: 2.5rem;
+    }
+    hr{
+        margin: 2rem 0;
+    }
 }

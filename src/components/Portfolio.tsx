@@ -1,45 +1,55 @@
-import React, { Component } from "react";
+// Import modules
+import * as React from "react";
+import { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPosts } from "../config/actions/postAction";
+import Error from "./Error";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-// tslint:disable-next-line:no-var-requires
+import Wait from "./Wait";
 const Parser = require("html-react-parser");
-class Portfolio extends Component<any, any> {
-  private regexp = /<(?:[^><\"\']*?(?:([\"\']).*?\1)?[^><\'\"]*?)+(?:>|$)/g;
-  public componentDidMount() {
+// Define props interface
+interface Iprops {
+  items: any[];
+  fetchPosts: any;
+  error?: Error;
+}
+// Component
+class Portfolio extends Component <Iprops, any> {
+  public componentDidMount(): void {
     this.props.fetchPosts();
   }
-  public render() {
-    return (
-      <React.Fragment>
+  public render(): React.ReactNode {
+    const { items, error } = this.props;
+    return <React.Fragment>
         <NavBar background="#283149" />
-        <main id="portfolio" className="wrapper">
-          <h1>My latest work</h1>
-          <section id="portfolio-items">
-            {this.props.items
-              ? this.props.items.map((item: any) => (
-                  <figure key={item.id}>
-                    <img src={item.featured_img} alt="" />
-                    <figcaption>
-                      <h2>{item.title.rendered}</h2>
-                      {Parser(item.content.rendered)}
-                    </figcaption>
-                    <a href={item.link} target="_blank">View project</a>
-                  </figure>
-                ))
-              : ""}
-          </section>
-          <a className="codepen-link" href="http://codepen.io/cvillafraz">See more!</a>
-        </main>
+        {!error ? (items.length >= 1 ? <main id="portfolio" className="wrapper">
+                <h1>My latest work</h1>
+                <section id="portfolio-items">
+                  {items.map((item: any) => <figure key={item.id}>
+                      <img src={item.featured_img} alt="" />
+                      <figcaption>
+                        <h2>{item.title.rendered}</h2>
+                        {Parser(item.content.rendered)}
+                      </figcaption>
+                      <a href={item.link} target="_blank">
+                        View project
+                      </a>
+                    </figure>)}
+                </section>
+                <a className="codepen-link" href="http://codepen.io/cvillafraz">
+                  See more!
+                </a>
+        </main> : <Wait />)
+           : <Error error={error} />}
         <Footer />
-      </React.Fragment>
-    );
+      </React.Fragment>;
   }
 }
 
-const mapStateToProps = (state: any) => ({
-  items: state.posts.items.filter((post: any) => post.categories[0] === 190),
+const mapStateToProps = (state: any): object => ({
+  error: state.errorMessage,
+  items: state.posts.items.filter((post: any): boolean => post.categories[0] === 190),
 });
 
 export default connect(mapStateToProps, { fetchPosts })(Portfolio);

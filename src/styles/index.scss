@@ -6,6 +6,7 @@
 @import "Error";
 @import "Blog";
 @import "Post";
+@import "Modal";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 *,*::before,*::after{
     box-sizing: border-box;
@@ -28,4 +29,22 @@ main{
     width: 80%;
     max-width: 1024px;
     margin: 0 auto;
+}
+.wait-screen{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: transparentize($color3, .2);
+    z-index: 100;
+}
+.wait-screen span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: $color4;
+    z-index: 101;
 }

@@ -3,7 +3,7 @@ import { GET_PAGES } from "../actions/types";
 const initialState = {
     items: [],
 };
-export default function(state = initialState, action: AnyAction) {
+export default function(state: object = initialState, action: AnyAction) {
     switch (action.type) {
         case GET_PAGES:
             return {

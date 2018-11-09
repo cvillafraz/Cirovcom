@@ -1,44 +1,17 @@
-// T8uL1esp8p@!UGZM8M
 // Import modules
-import * as ES6Promise from "es6-promise";
-import history from "history";
 import * as React from "react";
 import { Component } from "react";
 import { Provider } from "react-redux";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import About from "./components/About";
+import Blog from "./components/Blog";
 import Error from "./components/Error";
 import Home from "./components/Home";
-import Wait from "./components/Wait";
+import Portfolio from "./components/Portfolio";
+import Post from "./components/Post";
 import store from "./config/store";
-const Loadable = require("react-loadable");
-ES6Promise.polyfill();
-interface ILoadableComponent {
-  component:
-  (React.ComponentClass<any, any>) |
-  (React.StatelessComponent<any>);
-}
-const About: ILoadableComponent["component"] = Loadable({
-  loader: (): Promise<any> =>
-    import("./components/About" /* webpackChunkName: "about" */),
-  loading: Wait,
-});
-const Portfolio: ILoadableComponent["component"] = Loadable({
-  loader: (): Promise<any> =>
-    import("./components/Portfolio" /* webpackChunkName: "portfolio" */),
-  loading: Wait,
-});
-const Blog: ILoadableComponent["component"] = Loadable({
-  loader: (): Promise<any> =>
-    import("./components/Blog" /* webpackChunkName: "blog" */),
-  loading: Wait,
-});
-const Post: ILoadableComponent["component"] = Loadable({
-  loader: (): Promise<any> =>
-    import("./components/Post" /* webpackChunkName: "post" */),
-  loading: Wait,
-});
 // App component
-class App extends Component<any, any> {
+class App extends Component <any, any> {
   public render(): React.ReactNode {
     return <Provider store={store}>
         <Router>
@@ -54,4 +27,4 @@ class App extends Component<any, any> {
       </Provider>;
   }
 }
-export default App;
+export = App;

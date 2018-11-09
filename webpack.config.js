@@ -1,8 +1,12 @@
 const path=require('path');
 const HtmlWebpackPlugin=require('html-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const webpack = require("webpack");
+const autoprefixer = require("autoprefixer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: { main: "./src/index.tsx" },
   output: {
     path: path.join(__dirname, "dist/"),
     filename: "bundle.js",
@@ -22,7 +26,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          { loader: "style-loader" },
+          { loader: MiniCssExtractPlugin.loader },
           { loader: "css-loader" },
           { loader: "postcss-loader" },
           { loader: "sass-loader" }
@@ -35,7 +39,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./public/index.html"
+    }),
+    new MiniCssExtractPlugin({
+      filename: "bundle.css"
+    }),
+    new CopyWebpackPlugin([{ from: "./public/logo_cut_sJJ_icon.ico" }]),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [autoprefixer()]
+      }
     })
-  ]
+  ],
 };
+
+  
