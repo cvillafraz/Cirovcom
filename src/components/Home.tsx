@@ -2,7 +2,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 import * as React from "react";
-import { Link } from "react-router-dom";
 import Modal from "./Modal";
 import NavBar from "./NavBar";
 // define state interface
@@ -115,11 +114,8 @@ class Home extends Component<any, IState> {
               >
                 <FontAwesomeIcon icon={["fab", "stack-overflow"]} />
               </a>
-              <a onClick={this.handleModal}>
-                <FontAwesomeIcon icon={["far", "envelope"]} />
-              </a>
             </div>
-            <Link to="/portfolio" className="portfolio-link">Check my work!</Link>
+            <button onClick={this.handleModal}>Mail me!</button>
           </section>
         </div>
       </React.Fragment>
