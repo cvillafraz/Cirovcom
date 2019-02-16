@@ -32,7 +32,7 @@ class Portfolio extends Component <Iprops, any> {
                         <h2>{item.title.rendered}</h2>
                         {Parser(item.content.rendered)}
                       </figcaption>
-                      <a href={item.link} target="_blank">
+                      <a href={item.code_link} target="_blank">
                         View project
                       </a>
                     </figure>)}

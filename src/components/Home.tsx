@@ -92,6 +92,14 @@ class Home extends Component<any, IState> {
             </div>
             <div className="social-icons">
               <a
+                href="https://twitter.com/cvillafraz"
+                target="_blank"
+                item-prop="url"
+                aria-label="twitter"
+              >
+                <FontAwesomeIcon icon={["fab", "twitter"]} />
+              </a>
+              <a
                 href="https://www.linkedin.com/in/ciro-villafraz/"
                 target="_blank"
                 item-prop="url"
