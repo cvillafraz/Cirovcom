@@ -8,6 +8,19 @@
     z-index: 100;
     background: transparentize($color3, .1);
 }
+.modal-intro{
+    h1{
+        text-align: center;
+    }
+    p{
+        margin: 1rem 0;
+    }
+    a{
+        color:$color3;
+        text-decoration: none;
+        font-weight: bold;
+    } 
+}
 .form-container{
     position: absolute;
     top:50%;

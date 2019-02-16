@@ -75,6 +75,11 @@ class Modal extends Component <any, Istate> {
     return (
       <div className="modal-layer" ref={this.modal}>
         <div className="form-container" role="dialog" aria-modal="true" aria-label="Send me an email">
+        <div className="modal-intro">
+        <h1>Get in touch</h1>
+        <p>Send any inquiries
+          to <a href="mailto:contact@cirov.com.ve">contact@cirov.com.ve</a> or use the following form:</p>
+        </div>
           <form onSubmit={this.handleSubmit}>
             {this.state.response.status !== 0 && (
               <p
