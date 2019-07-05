@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 import * as React from "react";
 import { Link } from "react-router-dom";
+import Ciro from "../../img/io.png";
 import Modal from "./Modal";
 import NavBar from "./NavBar";
 // define state interface
@@ -82,7 +83,7 @@ class Home extends Component<any, IState> {
             item-scope="true"
             item-type="http://schema.org/Person"
           >
-            <img src="../img/io.png" alt="A photo of me" item-prop="image" />
+            <img src={Ciro} alt="A photo of me" item-prop="image" />
             <div id="landing-text">
               <h1 item-prop="name">Ciro Villafraz</h1>
               <h2 item-prop="jobTitle">

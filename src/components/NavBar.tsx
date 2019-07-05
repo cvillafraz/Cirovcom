@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
 import { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../img/logo.png";
+
 // define state and props interfaces
 interface INavBarState {
   isBurgerNavClicked: boolean;
@@ -26,7 +28,7 @@ class NavBar extends Component <INavBarProps, INavBarState> {
         <div className="blue-layer" style={{ display: this.state.isBurgerNavClicked ? "block" : "none" }} />
         <div className="wrapper">
           <Link to="/" className="logo">
-            <img src="../img/logo.png" alt="home page" />
+            <img src={logo} alt="home page" />
           </Link>
           <div>
             <span onClick={this.toggleMenu} aria-label="toggle menu">
