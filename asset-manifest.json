@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Cirovcom/static/css/main.bcd7fe64.chunk.css",
+    "main.js": "/Cirovcom/static/js/main.2e7e5595.chunk.js",
+    "main.js.map": "/Cirovcom/static/js/main.2e7e5595.chunk.js.map",
+    "runtime~main.js": "/Cirovcom/static/js/runtime~main.18f072aa.js",
+    "runtime~main.js.map": "/Cirovcom/static/js/runtime~main.18f072aa.js.map",
+    "static/js/2.fc49a777.chunk.js": "/Cirovcom/static/js/2.fc49a777.chunk.js",
+    "static/js/2.fc49a777.chunk.js.map": "/Cirovcom/static/js/2.fc49a777.chunk.js.map",
+    "index.html": "/Cirovcom/index.html",
+    "precache-manifest.7087a5ab838df2740419bf1a0307a5ca.js": "/Cirovcom/precache-manifest.7087a5ab838df2740419bf1a0307a5ca.js",
+    "service-worker.js": "/Cirovcom/service-worker.js",
+    "static/css/main.bcd7fe64.chunk.css.map": "/Cirovcom/static/css/main.bcd7fe64.chunk.css.map",
+    "static/media/io.png": "/Cirovcom/static/media/io.6f91bb26.png",
+    "static/media/logo.png": "/Cirovcom/static/media/logo.afe9cc92.png"
+  }
+}
