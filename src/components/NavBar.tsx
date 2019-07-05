@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
 import { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../img/logo.png";
+import logo from "../img/logo.png";
 
 // define state and props interfaces
 interface INavBarState {

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import Ciro from "../../img/io.png";
+import Ciro from "../img/io.png";
 import Modal from "./Modal";
 import NavBar from "./NavBar";
 // define state interface
