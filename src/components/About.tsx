@@ -1,6 +1,6 @@
 // import modules
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as React from "React";
+import * as React from "react";
 import { Component } from "react";
 import { connect } from "react-redux";
 import { getPages } from "../config/actions/pagesAction";

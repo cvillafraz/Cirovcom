@@ -1,3 +1,5 @@
+import * as React from "react";
+import { Component } from "react";
 declare global {
     // tslint:disable-next-line:interface-name
     interface Window {
@@ -9,8 +11,6 @@ declare global {
     }
 }
 
-import * as React from "react";
-import { Component } from "react";
 const SHORTNAME = "cirovilla";
 const WEBSITE_URL = document.URL;
 
