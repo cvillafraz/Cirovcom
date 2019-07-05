@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { Provider } from "react-redux";
-import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import About from "./components/About";
 import Blog from "./components/Blog";
 import Error from "./components/Error";
@@ -27,4 +27,4 @@ class App extends Component <any, any> {
       </Provider>;
   }
 }
-export = App;
+export default App;
