@@ -7,6 +7,12 @@
     "build": "react-scripts build",
     "postbuild": "react-snap"
   },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cvillafraz/Cirovcom"
