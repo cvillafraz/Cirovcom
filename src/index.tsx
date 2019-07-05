@@ -15,7 +15,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 
 // Other imports
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import {hydrate, render} from "react-dom";
 import App from "./App";
 import "./styles/index.scss";
 
@@ -35,7 +35,9 @@ library.add(
   faEnvelope,
 );
 // Render
-ReactDOM.render(
-  <App />,
-  document.getElementById("root") as HTMLElement,
-);
+const rootElement: any = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
+}
