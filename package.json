@@ -7,6 +7,9 @@
     "build": "react-scripts build",
     "postbuild": "react-snap"
   },
+  "engines": {
+    "node": "10.3.0"
+  }
   "reactSnap": {
     "puppeteerArgs": [
       "--no-sandbox",
