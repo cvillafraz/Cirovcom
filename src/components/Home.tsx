@@ -116,14 +116,6 @@ class Home extends Component<any, IState> {
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
-              <a
-                href="https://es.stackoverflow.com/users/103373/c-villafraz?tab=profile"
-                target="_blank"
-                item-prop="url"
-                aria-label="stack overflow"
-              >
-                <FontAwesomeIcon icon={["fab", "stack-overflow"]} />
-              </a>
               <a onClick={this.handleModal}>
                 <FontAwesomeIcon icon={["far", "envelope"]} />
               </a>
