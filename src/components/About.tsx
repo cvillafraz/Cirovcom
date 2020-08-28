@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { getPages } from "../config/actions/pagesAction";
 import Error from "./Error";
 import Footer from "./Footer";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import NavBar from "./NavBar";
 import Wait from "./Wait";
 const Parser = require("html-react-parser");
@@ -28,9 +28,9 @@ class About extends Component<Iprops, Istate> {
   public componentDidMount(): void {
     this.props.getPages();
   }
-  public handleModal = (): void => {
-    this.setState({ isModalVisible: this.state.isModalVisible ? false : true });
-  }
+  // public handleModal = (): void => {
+  //   this.setState({ isModalVisible: this.state.isModalVisible ? false : true });
+  // }
   public render(): React.ReactNode {
     const aboutPage = this.props.pages
       && this.props.pages.filter((page: any) => page.id === 1726)[0];
@@ -40,7 +40,7 @@ class About extends Component<Iprops, Istate> {
           .sort((a: any, b: any) => a.id - b.id);
     return (
       <React.Fragment>
-        {this.state.isModalVisible && <Modal toggle={this.handleModal} />}
+        { /*this.state.isModalVisible && <Modal toggle={this.handleModal} />*/ }
         <NavBar background="#283149" />
         {!this.props.error ? (
           aboutPage && services ? (
@@ -75,7 +75,6 @@ class About extends Component<Iprops, Istate> {
                     );
                   })}
                 </div>
-                <button onClick={this.handleModal}>Let's start a project!</button>
               </section>
             </main>
           ) : (
