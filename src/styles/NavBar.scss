@@ -1,94 +1,119 @@
 @import "colors";
-  header {
-      position:fixed;
-      top:0;
-      left: 0;
-      z-index: 4;
-      width: 100%;
-      overflow: hidden;
-      padding: .2rem 0;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.2rem 0;
+}
+header > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 43%;
+  vertical-align: middle;
+}
+.blue-layer {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: $color1;
+  animation: slideMenu 0.8s ease-out 1;
+}
+nav {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav span {
+  display: block;
+  text-align: right;
+}
+nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: inherit;
+}
+nav ul li {
+  list-style-type: none;
+  padding: 1.3rem 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: $color4;
+  text-decoration: none;
+  font-size: 2rem;
+  &:hover,
+  &:active {
+    color: $color3;
   }
-  header > .wrapper {
+}
+.active {
+  color: $color3;
+}
+.nav-icon {
+  font-size: 1.4rem;
+  color: $color4;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.fa-times {
+  font-size: 1.6rem;
+}
+@keyframes slideMenu {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo img {
+    width: 65%;
+  }
+  .nav-icon {
+    display: none;
+  }
+  .fa-times {
+    font-size: 1.8rem;
+  }
+  nav {
+    display: block !important;
+    position: static;
+    width: initial;
+    height: initial;
+  }
+  nav ul {
+    position: static;
+    transform: unset;
+    width: inherit;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
-  .logo img{
-    width: 43%;
-    vertical-align: middle;
+  nav ul li a {
+      font-size: 1.1rem;
   }
-  .blue-layer{
-    display: none;
-    position: fixed;
-      width: 100vw;
-      height:100vh;
-      top:0;
-      left: 0;
-      background: $color1;
-      animation: slideMenu .8s ease-out 1;
+  .nav-elements{
+    flex-basis: 50%;
   }
-  nav{
-      display: none;
-      width: 100vw;
-      height:100vh;
-      text-align: center;
-      position: fixed;
-      top:0;
-      left: 0;
+}
+@media screen and (min-width: 960px){
+  .nav-elements{
+    flex-basis: 37.5%;
   }
-  nav span{
-    display: block;
-    text-align: right;
-  }
-  nav ul{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      width: inherit;
-  }
-  nav ul li {
-    list-style-type: none;
-    padding: 1.3rem 0;
-  }
-  nav ul li a{
-      text-decoration: none;
-      color: $color4;
-      text-decoration: none;
-      font-size: 2rem;
-      &:hover, &:active{
-        color:$color3;
-      }
-  }
-  .active{
-      color:$color3;
-  }
-  .nav-icon{
-      font-size: 1.4rem;
-      color:$color4;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-  }
-  .fa-times{
-      font-size:1.6rem;
-  }
-  @keyframes slideMenu {
-      from{
-          top:-100vh
-      }
-      to{
-          top:0
-      }
-  }
-@media screen and (min-width: 768px){
-    .logo img{
-        width: 65%;
-    }
-    .nav-icon{
-        font-size: 1.6rem;
-    }
-    .fa-times{
-        font-size: 1.8rem;
-    }
 }

@@ -50,7 +50,7 @@ class Modal extends Component <any, Istate> {
     };
     axios
       .post(
-        "https://cirov.com.ve/wp/wp-json/contact/v1/send",
+        "https://wordpress.cirov.com.ve/wp-json/contact/v1/send",
         JSON.stringify(request),
         {
           headers: {

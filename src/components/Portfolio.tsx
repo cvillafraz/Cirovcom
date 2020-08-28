@@ -32,14 +32,11 @@ class Portfolio extends Component <Iprops, any> {
                         <h2>{item.title.rendered}</h2>
                         {Parser(item.content.rendered)}
                       </figcaption>
-                      <a href={item.code_link} target="_blank">
+                      <a href={item.code_link} target="_blank" rel="noopener noreferrer">
                         View project
                       </a>
                     </figure>)}
                 </section>
-                <a className="codepen-link" href="http://codepen.io/cvillafraz">
-                  See more!
-                </a>
         </main> : <Wait />)
            : <Error error={error} />}
         <Footer />

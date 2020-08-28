@@ -3,7 +3,7 @@
 #gradient-layer{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom right, $color1, $color3);
+    background: linear-gradient(to bottom, $color1, $color3);
     background-repeat:no-repeat; 
     background-size: cover;
     color:$color4;
@@ -24,13 +24,9 @@
     border-radius: 20px;
     border: 1px solid $color4;
     font-size:1.2rem;
-    transition: .3s all ease;
-    &:hover,&:active,&:focus{
-        background: $color2;
-    }
 }
 #gradient-layer img{
-    width: 37.5%;
+    width: 30%;
     transform: translateY(25%);
 }
 #landing-text h1{
@@ -46,7 +42,7 @@
 .social-icons{
     display: flex;
     width: 45%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .social-icons a{
     color: $color4;
@@ -59,19 +55,23 @@
     }
 }
 @media screen and (min-width: 768px){
+    .portfolio-link{
+        display: none;
+    }
     #gradient-layer img{
         width: 18%;
     }
     #landing-text{
         h1{
-            font-size: 2.8rem;
+            font-size: 2.9rem;
         }
         h2{
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
     }
     .social-icons{
         width: 32%;
+        transform: translateY(-25%);
     }
     .social-icons a{
         font-size: 2.4rem;

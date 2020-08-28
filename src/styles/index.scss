@@ -4,8 +4,6 @@
 @import "Home";
 @import "Footer";
 @import "Error";
-@import "Blog";
-@import "Post";
 @import "Modal";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 *,*::before,*::after{
@@ -15,7 +13,7 @@
 }
 body{
     background: $color4;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color:$color2;
 }
 #root{

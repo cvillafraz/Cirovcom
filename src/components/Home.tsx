@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import Ciro from "../img/io.png";
-import Modal from "./Modal";
+import pc from "../img/pc.svg";
+// import Modal from "./Modal";
 import NavBar from "./NavBar";
 // define state interface
 interface IState {
@@ -30,9 +30,9 @@ class Home extends Component<any, IState> {
     // stop typing animation when unmounting
     clearTimeout(this.textTimeout);
   }
-  public handleModal = (): void => {
+  /* public handleModal = (): void => {
     this.setState({ isModalVisible: this.state.isModalVisible ? false : true });
-  }
+  } */
   public type = (): void => {
     // Got this code out of this tutorial https://www.youtube.com/watch?v=POX3dT-pB4E
     // Current index of word
@@ -70,12 +70,12 @@ class Home extends Component<any, IState> {
     }
     this.setState({ txt: this.newTxt });
     this.textTimeout = setTimeout(() => this.type(), typeSpeed);
-  }
+  };
 
   public render(): React.ReactNode {
     return (
       <React.Fragment>
-        {this.state.isModalVisible && <Modal toggle={this.handleModal} />}
+        {/*this.state.isModalVisible && <Modal toggle={this.handleModal} />*/}
         <NavBar background="rgba(0,0,0,0)" />
         <div id="gradient-layer">
           <section
@@ -83,7 +83,7 @@ class Home extends Component<any, IState> {
             item-scope="true"
             item-type="http://schema.org/Person"
           >
-            <img src={Ciro} alt="A photo of me" item-prop="image" />
+            <img src={pc} alt="" />
             <div id="landing-text">
               <h1 item-prop="name">Ciro Villafraz</h1>
               <h2 item-prop="jobTitle">
@@ -97,6 +97,7 @@ class Home extends Component<any, IState> {
                 target="_blank"
                 item-prop="url"
                 aria-label="twitter"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "twitter"]} />
               </a>
@@ -105,6 +106,7 @@ class Home extends Component<any, IState> {
                 target="_blank"
                 item-prop="url"
                 aria-label="linkedin"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "linkedin"]} />
               </a>
@@ -113,14 +115,19 @@ class Home extends Component<any, IState> {
                 target="_blank"
                 item-prop="url"
                 aria-label="github"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
-              <a onClick={this.handleModal}>
+              <a
+                href="mailto:contact@cirov.com.ve" /*onClick={this.handleModal}*/
+              >
                 <FontAwesomeIcon icon={["far", "envelope"]} />
               </a>
             </div>
-            <Link to="/portfolio" className="portfolio-link">Check my work!</Link>
+            <Link to="/portfolio" className="portfolio-link">
+              Check my work!
+            </Link>
           </section>
         </div>
       </React.Fragment>

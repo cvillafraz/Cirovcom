@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
 import { Component } from "react";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 // State interface
 interface Istate {
   isModalVisible: boolean;
@@ -13,13 +13,13 @@ class Footer extends Component <any, Istate> {
     super(props);
     this.state = { isModalVisible: false };
   }
-  public handleModal = (): void => {
+  /* public handleModal = (): void => {
     this.setState({ isModalVisible: this.state.isModalVisible ? false : true });
-  }
+  } */
   public render(): React.ReactNode {
     return (
       <React.Fragment>
-        {this.state.isModalVisible && <Modal toggle={this.handleModal} />}
+        { /* this.state.isModalVisible && <Modal toggle={this.handleModal} /> */ }
         <footer>
           <div id="contact" className="wrapper">
             <h2>Contact me!</h2>
@@ -29,6 +29,7 @@ class Footer extends Component <any, Istate> {
                 target="_blank"
                 item-prop="url"
                 aria-label="twitter"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "twitter"]} />
               </a>
@@ -37,6 +38,7 @@ class Footer extends Component <any, Istate> {
                 target="_blank"
                 item-prop="url"
                 aria-label="linkedin"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "linkedin"]} />
               </a>
@@ -45,18 +47,11 @@ class Footer extends Component <any, Istate> {
                 target="_blank"
                 item-prop="url"
                 aria-label="github"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
-              <a
-                href="https://es.stackoverflow.com/users/103373/c-villafraz?tab=profile"
-                target="_blank"
-                item-prop="url"
-                aria-label="stack overflow"
-              >
-                <FontAwesomeIcon icon={["fab", "stack-overflow"]} />
-              </a>
-              <a onClick={this.handleModal}>
+              <a href="mailto:contact@cirov.com.ve" /*onClick={this.handleModal}*/>
                 <FontAwesomeIcon icon={["far", "envelope"]} />
               </a>
             </div>

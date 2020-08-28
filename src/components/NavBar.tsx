@@ -30,7 +30,7 @@ class NavBar extends Component <INavBarProps, INavBarState> {
           <Link to="/" className="logo">
             <img src={logo} alt="home page" />
           </Link>
-          <div>
+          <div className="nav-elements">
             <span onClick={this.toggleMenu} aria-label="toggle menu">
               <FontAwesomeIcon icon={this.state.isBurgerNavClicked ? "times" : "bars"} className="nav-icon" />
             </span>
@@ -42,15 +42,12 @@ class NavBar extends Component <INavBarProps, INavBarState> {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about_services">
+                  <NavLink to="/about-services">
                     About &amp; Services
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/portfolio">Portfolio</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/blog">Blog</NavLink>
                 </li>
               </ul>
             </nav>
