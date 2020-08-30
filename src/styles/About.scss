@@ -1,72 +1,77 @@
 @import "colors";
 @import "NavBar";
-#about-section{
+#about-section {
+  background: $color3;
+  color: $color4;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+#about-section article {
+  padding: 5rem 0;
+  font-size: 1.2rem;
+}
+#about-section h1,
+#services-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+#social {
+  display: flex;
+  justify-content: space-around;
+}
+#services-section {
+  text-align: center;
+}
+.service {
+  background: $color1;
+  color: $color4;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 19px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 3px 6px $color1;
+}
+.service h3,
+.service h4 {
+  color: $color3;
+  margin-bottom: 0.6rem;
+}
+.service-icon {
+  font-size: 2rem;
+  color: $color3;
+}
+.service h4,
+.service p {
+  text-align: left;
+}
+.service p {
+  margin-bottom: 2rem;
+}
+#services-section button {
+  background: $color4;
+  border: 1px solid $color3;
+  padding: 0.3rem 1.1rem;
+  font-size: 1.25rem;
+  color: $color3;
+  border-radius: 14px;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
     background: $color3;
-    color:$color4;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    color: $color4;
+  }
 }
-#about-section article{
-    padding: 3rem 0 5rem;
-    font-size: 1.2rem;
-}
-#about-section h1, #services-section h2{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.8rem;
-}
-#social{
+@media screen and (min-width: 768px) {
+  #about-section article {
+    padding: 6rem;
+  }
+  #services-section > div {
     display: flex;
-    justify-content: space-around;
-}
-#services-section{
-    text-align: center;
-}
-.service{
-    background: $color1;
-    color:$color4;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 19px;
-    margin-bottom: 1rem;
-    box-shadow: 0px 3px 6px $color1;
-}
-.service h3, .service h4{
-    color:$color3;
-    margin-bottom: 0.6rem;
-}
-.service-icon{
-    font-size: 2rem;
-    color:$color3;
-}
-.service h4, .service p{
-    text-align: left;
-}
-.service p{
-    margin-bottom: 2rem;
-}
-#services-section button{
-    background: $color4;
-    border: 1px solid $color3;
-    padding: .3rem 1.1rem;
-    font-size: 1.25rem;
-    color: $color3;
-    border-radius: 14px;
-    cursor: pointer;
-    &:hover, &:active, &:focus{
-        background: $color3;
-        color:$color4;
-    }
-}
-@media screen and (min-width: 768px){
-    #about-section article{
-        padding: 5rem 6rem 6rem;
-    }
-    #services-section>div{
-        display: flex;
-        justify-content: space-between;
-    }
-    .service{
-        flex-basis: 32%;
-    }
+    justify-content: space-between;
+  }
+  .service {
+    flex-basis: 32%;
+  }
 }
