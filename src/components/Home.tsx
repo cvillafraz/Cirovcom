@@ -120,7 +120,7 @@ class Home extends Component<any, IState> {
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
               <a
-                href="mailto:contact@cirov.com.ve" /*onClick={this.handleModal}*/
+                href="mailto:contact@cirov.com" /*onClick={this.handleModal}*/
               >
                 <FontAwesomeIcon icon={["far", "envelope"]} />
               </a>
