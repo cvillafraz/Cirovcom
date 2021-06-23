@@ -14,7 +14,7 @@ interface IState {
 // Home component
 class Home extends Component<any, IState> {
   private newTxt: string = "";
-  private words: string[] = ["Developer", "Designer"];
+  private words: string[] = ["Analyst", "Scientist"];
   private wordIndex: number = 0;
   private wait: number = 3000;
   private isDeleting: boolean = false;
@@ -87,7 +87,7 @@ class Home extends Component<any, IState> {
             <div id="landing-text">
               <h1 item-prop="name">Ciro Villafraz</h1>
               <h2 item-prop="jobTitle">
-                Professional Web{" "}
+                Professional Data{" "}
                 <span className="non-static-text">{this.state.txt}</span>
               </h2>
             </div>
@@ -119,9 +119,7 @@ class Home extends Component<any, IState> {
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
-              <a
-                href="mailto:contact@cirov.com" /*onClick={this.handleModal}*/
-              >
+              <a href="mailto:contact@cirov.com" /*onClick={this.handleModal}*/>
                 <FontAwesomeIcon icon={["far", "envelope"]} />
               </a>
             </div>
