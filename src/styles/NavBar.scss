@@ -106,14 +106,14 @@ nav ul li a {
     justify-content: space-between;
   }
   nav ul li a {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
-  .nav-elements{
-    flex-basis: 50%;
-  }
-}
-@media screen and (min-width: 960px){
-  .nav-elements{
-    flex-basis: 37.5%;
+  .nav-elements {
+    flex-basis: 20%;
   }
 }
+// @media screen and (min-width: 960px){
+//   .nav-elements{
+//     flex-basis: 37.5%;
+//   }
+// }
